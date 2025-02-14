@@ -1,0 +1,17 @@
+# Ignore all Python cache and virtual environments
+__pycache__/
+*.pyc
+venv/
+
+# Ignore logs
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files
+.env
+
+# Ignore pytest cache
+pytest_cache/

@@ -1,0 +1,12 @@
+Flask==3.1.0
+gunicorn
+google-cloud-bigquery==3.29.0
+google-auth
+google-auth-httplib2
+google-auth-oauthlib
+requests
+pandas
+pyarrow
+pytest
+
+
