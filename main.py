@@ -17,8 +17,7 @@ def main(big_query_client=client):
         )
         uri = "gs://mlops-file/us-states.csv"
         load_job = big_query_client.load_table_from_uri(
-            uri, table_id, job_config=job_config
-        )
+            uri, table_id, job_config=job_config)
 
         load_job.result()
 
