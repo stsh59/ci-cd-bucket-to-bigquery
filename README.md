@@ -1,0 +1,1 @@
+# This repository is about creating a simple flask application that reads the file from gcp bucket and loads the data in gcp bigquery. we containarized this application using docker and performed complete automated CI/CD using cloud build and cloud build triggers.
