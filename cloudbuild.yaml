@@ -1,8 +1,8 @@
 steps:
-  - name: 'gcr.io/cloud-builders/Docker'
+  - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '--platform=linux/amd64', '-t', 'gcr.io/gcp-cloud-450805/demo-flask-app:$COMMIT_SHA', '.']
 
-  - name: 'gcr.io/cloud-builders/Docker'
+  - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/gcp-cloud-450805/demo-flask-app:$COMMIT_SHA']
 
   - name: 'gcr.io/gcp-cloud-450805/demo-flask-app:$COMMIT_SHA'
