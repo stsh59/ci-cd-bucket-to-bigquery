@@ -1,18 +1,18 @@
 steps:
-  - name: "gcr.io/gcp-cloud-450805/cloud-builder/Docker"
+  - name: 'gcr.io/cloud-builder/Docker'
     args: ['build', '--platform=linux/amd64', '-t', 'gcr.io/gcp-cloud-450805/demo-flask-app:$COMMIT_SHA', '.']
 
-  - name: "gcr.io/gcp-cloud-450805/cloud-builder/Docker"
+  - name: 'gcr.io/cloud-builder/Docker'
     args: ['push', 'gcr.io/gcp-cloud-450805/demo-flask-app:$COMMIT_SHA']
 
-  - name: "gcr.io/gcp-cloud-450805/cloud-builder/Docker"
-    entrypoint: bash
+  - name: 'gcr.io/gcp-cloud-450805/demo-flask-app:$COMMIT_SHA'
+    entrypoint: 'bash'
     args:
       - '-c'
       - |
         python -m pytest
 
-  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
     args:
       - 'run'
